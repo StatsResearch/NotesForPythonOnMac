@@ -1,0 +1,71 @@
+---
+title: "Note For Using Python on a MacBook Pro"
+author: "Rob Donald"
+subtitle: "Research Running Log"
+date: "`r format(Sys.time(), '%A %d %B %Y')`"
+header-includes:
+- \usepackage{graphicx}
+output:
+  pdf_document:
+    fig_caption: yes
+    toc: yes
+    toc_depth: '2'
+urlcolor: blue
+---
+\def\shrug{\texttt{\raisebox{0.75em}{\char`\_}\char`\\\char`\_\kern-0.5ex(\kern-0.25ex\raisebox{0.25ex}
+{\rotatebox{45}{\raisebox{-.75ex}"\kern-1.5ex\rotatebox{-90})}}\kern-0.5ex)\kern-0.5ex\char`\_/\raisebox{0.75em}
+{\char`\_}}}
+
+```{r setup, include=FALSE}
+# The above LaTex
+# From https://tex.stackexchange.com/questions/279100/typeset-the-shrug-%C2%AF-%E3%83%84-%C2%AF-emoji (post by Mark Wibrow)
+# The fig.pos = 'h' tells LaTeX to put the figure where you ask for it
+knitr::opts_chunk$set(echo = TRUE,fig.height=8,fig.width=12,fig.pos = 'h')
+options(width=80)
+```
+
+```{r library_setup, include=FALSE}
+suppressMessages({suppressWarnings({
+    library(dplyr)
+    library(readr)
+    library(lubridate)
+    library(here)
+    
+    library(ggplot2)
+    library(RobsRUtils)
+    library(pander)
+    library(kableExtra)
+
+})})
+```
+
+# Abstract
+
+A set of notes documenting the initially painful process of getting a Python development environment up and running
+on my MacBook Pro (Retina, 13-inch, Early 2013, macOS Catalina, 10.15.7). 
+
+This is written from a point of view of having used R for the last 5 years plus. But with a previous background of using
+Python 2.x very heavily.
+
+
+# 2021-11-20
+
+* Initial installation of Python 3.x using Homebrew
+
+* Initial playing with VS Code.
+
+
+# 2021-11-21
+
+## Rmarkdown for Python?
+
+I thought I'd check if there was a Python equivalent to Rmarkdown and in particular Rmarkdown to PDF.
+
+Using this Google query "Does python have an equivalent to Rmarkdown", the answer appears to be ... No.
+
+See (https://jackbakerds.com/posts/python-equivalent-rmarkdown/)
+
+
+
+
+
