@@ -102,18 +102,6 @@ for re-learning the Python basics *and* a new IDE.
 
 This was installed into the venv for this project.
 
-# String Builder Techniques
-
-Anyway the real research tonight is about extracting the useful bits from an osxphotos object
-and getting it into a string for output to a .csv file.
-
-## ExpDBLock As Example Code
-
-I've done all this tedious stuff before (many times) but it occurred to me that the ExpDBLock
-code must be a good starting point. So I tracked that down off the backup disks and have added
-it to my project ... which it turns we need to call a "workspace" \small\shrug\normalsize.
-
-
 # VS Code Things
 
 Multi-root workspaces. This just means having access to more than one folder in your "project". 
