@@ -54,6 +54,15 @@ Python 2.x very heavily.
 
 * Initial playing with VS Code.
 
+* Problems accessing Photos DB from within VS Code debug to console. I've tracked this
+down to some clash of macosx Catalina security settings. If you run the code from a terminal
+it has access no problem because I've allowed that in the System Settings.
+
+Workaround to use project settings (.vscode/launch.json) of
+
+* "console": "externalTerminal"
+
+
 
 # 2021-11-21
 
@@ -65,6 +74,51 @@ Using this Google query "Does python have an equivalent to Rmarkdown", the answe
 
 See (https://jackbakerds.com/posts/python-equivalent-rmarkdown/)
 
+
+# 2021-11-24
+
+More observations on using VS Code with Python. It seems to me at this stage to be pretty
+awkward to use. It's full of, for me, irritating modes which I accept, particularly
+at this stage, are due to my dislike of using Python because it still seems to be
+very nerdy to set up. This coupled with what seems to still be a less than mature
+IDE means there is a lot of gritting of teeth.
+
+Another issue is that a lot of the stackoverflow answers don't work because they are
+suggesting fixes which are in earlier (and I suspect more buggy) versions.
+
+The one I'm dealing with tonight is that when you start a project it seems to automatically
+run the virtual environment and then *all* the code in the file you have open. 
+
+In my case because of the problem of the console not having the right security setup to access
+the Photos DB this causes an immediate crash. I *know* that will happen and it *is* annoying
+and had to be solved by using the external terminal. See the entry for 2021-11-20.
+
+By 20:55 some progress on extraction techniques. I accept that I need to make allowances
+for re-learning the Python basics *and* a new IDE.
+
+# Install pip-date
+
+* See (https://stackoverflow.com/questions/30559214/get-date-and-time-of-installation-for-packages-installed-via-pip)
+
+This was installed into the venv for this project.
+
+# String Builder Techniques
+
+Anyway the real research tonight is about extracting the useful bits from an osxphotos object
+and getting it into a string for output to a .csv file.
+
+## ExpDBLock As Example Code
+
+I've done all this tedious stuff before (many times) but it occurred to me that the ExpDBLock
+code must be a good starting point. So I tracked that down off the backup disks and have added
+it to my project ... which it turns we need to call a "workspace" \small\shrug\normalsize.
+
+
+# VS Code Things
+
+Multi-root workspaces. This just means having access to more than one folder in your "project". 
+The problem is that they can't use the word "project" because it means other things in closed source
+Visual Studio IDE product. See (https://code.visualstudio.com/docs/editor/workspaces).
 
 
 
